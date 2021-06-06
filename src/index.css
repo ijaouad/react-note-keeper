@@ -7,7 +7,84 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.card {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.is-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 25px !important;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: .6;
+}
+
+.is-none {
+  display: none;
+}
+
+.delete-button::before {
+  content: "\f1f8";
+  display: inline-block;
+  font: normal normal normal 20px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: .4;
+}
+
+
+@media only screen and (max-width: 1054px) {
+  .is-grid {
+      grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .card {
+      width:60%;
+  }
+}
+
+@media only screen and (max-width: 811px) {
+  .is-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .card {
+      width: 70%;
+  }
+}
+
+@media only screen and (max-width: 676px) {
+  .is-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .card {
+      width: 80%;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .is-grid {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .card {
+      width: 90%;
+  }
 }
